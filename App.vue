@@ -16,9 +16,12 @@
 	/*每个页面公共css */
 	/* 官方ui库 */
 	@import "/common/uni.css";
+	/* 第三方UI库 */
 	@import "animate.css";
 	/* 指定义图标库 */
 	@import "/common/icon.css";
+	/* UI基础库 */
+	@import "/common/zcm-main.css";
 	/* 公共样式 */
 	@import "/common/common.css";
 </style>
