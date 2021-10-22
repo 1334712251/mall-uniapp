@@ -1,1 +1,1 @@
-<view class="content"><view class="iconfont icon-wode"></view></view>
+<view><swiper-image vue-id="8dd740cc-1" resdata="{{swipers}}" bind:__l="__l"></swiper-image><index-nav vue-id="8dd740cc-2" resdata="{{indexnavs}}" bind:__l="__l"></index-nav><divider vue-id="8dd740cc-3" bind:__l="__l"></divider><three-adv vue-id="8dd740cc-4" resdata="{{threeAdv}}" bind:__l="__l"></three-adv><divider vue-id="8dd740cc-5" bind:__l="__l"></divider><card vue-id="8dd740cc-6" headTitle="每日精选" bodyCover="../../static/images/demo/demo4.jpg" bind:__l="__l"></card></view>

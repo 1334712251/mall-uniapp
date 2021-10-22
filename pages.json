@@ -3,42 +3,68 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				//"navigationBarTitleText": "Dloud商城",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						//"type":"transparent",
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "rgba(231, 231, 231,.7)",
+							"borderRadius": "16px",
+							"disabled": true,
+							"placeholder": "请输入商品名称  如：手机",
+							"placeholderColor": "#606266"
+						},
+						"buttons": [{
+								"color":"#989898",
+								"colorPressed":"#FD6801",
+								"float":"left",
+								"fontSize":"22px",
+								"fontSrc":"/static/font/iconfont.ttf",
+								"text":"\ue67a"
+							},
+							{
+								"color":"#989898",
+								"colorPressed":"#FD6801",
+								"float":"right",
+								"fontSize":"22px",
+								"fontSrc":"/static/font/iconfont.ttf",
+								"text":"\ue661"
+							}
+						]
+					}
+				}
 			}
+		}, {
+			"path": "pages/class/class",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
-        ,{
-            "path" : "pages/class/class",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/cart/cart",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/my",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "京东商城",
+		//"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#FFFFFF",
-		"backgroundColor": "#FFFFFF"
+		"backgroundColor": "#FFFFFF",
+		"navigationStyle":"custom"
 	},
 	//底部导航
 	"tabBar": {
@@ -69,16 +95,6 @@
 				"iconPath": "static/tabbar/my.png", //图标未选中
 				"selectedIconPath": "static/tabbar/mySelected.png", //图标选中
 				"text": "我的"
-			}
-		]
-	},
-	"condition" : { //模式配置，仅开发期间生效
-		"current": 0, //当前激活的模式(list 的索引项)
-		"list": [
-			{
-				"name": "", //模式名称
-				"path": "", //启动页面，必选
-				"query": "" //启动参数，在页面的onLoad函数里面得到
 			}
 		]
 	}
