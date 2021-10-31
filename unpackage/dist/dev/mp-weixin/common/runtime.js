@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/common/divider":1};
+/******/ 		var cssChunks = {"components/common/divider":1,"components/common/navigation":1,"uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar":1,"uni_modules/uni-icons/components/uni-icons/uni-icons":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/common/divider":"components/common/divider","components/common/card":"components/common/card","components/index/index-nav":"components/index/index-nav","components/index/swiper-image":"components/index/swiper-image","components/index/three-adv":"components/index/three-adv"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/common/divider":"components/common/divider","components/common/card":"components/common/card","components/index/index-head":"components/index/index-head","components/index/index-nav":"components/index/index-nav","components/index/swiper-image":"components/index/swiper-image","components/index/three-adv":"components/index/three-adv","components/common/navigation":"components/common/navigation","uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar":"uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar","uni_modules/uni-icons/components/uni-icons/uni-icons":"uni_modules/uni-icons/components/uni-icons/uni-icons"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

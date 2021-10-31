@@ -10,7 +10,6 @@ import divider from 'components/common/divider.vue';
 Vue.component('divider',divider)
 
 
-
 App.mpType = 'app'
 const app = new Vue({
     ...App

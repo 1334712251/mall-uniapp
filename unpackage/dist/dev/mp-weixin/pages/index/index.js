@@ -20,7 +20,7 @@
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 5);
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));
 var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.vue */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_index.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
@@ -134,7 +134,13 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var swiperImage = function swiperImage() {__webpack_require__.e(/*! require.ensure | components/index/swiper-image */ "components/index/swiper-image").then((function () {return resolve(__webpack_require__(/*! ../../components/index/swiper-image.vue */ 50));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var indexNav = function indexNav() {__webpack_require__.e(/*! require.ensure | components/index/index-nav */ "components/index/index-nav").then((function () {return resolve(__webpack_require__(/*! ../../components/index/index-nav.vue */ 55));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var threeAdv = function threeAdv() {__webpack_require__.e(/*! require.ensure | components/index/three-adv */ "components/index/three-adv").then((function () {return resolve(__webpack_require__(/*! ../../components/index/three-adv.vue */ 60));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var card = function card() {__webpack_require__.e(/*! require.ensure | components/common/card */ "components/common/card").then((function () {return resolve(__webpack_require__(/*! ../../components/common/card.vue */ 65));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var indexHead = function indexHead() {__webpack_require__.e(/*! require.ensure | components/index/index-head */ "components/index/index-head").then((function () {return resolve(__webpack_require__(/*! ../../components/index/index-head.vue */ 43));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var swiperImage = function swiperImage() {__webpack_require__.e(/*! require.ensure | components/index/swiper-image */ "components/index/swiper-image").then((function () {return resolve(__webpack_require__(/*! ../../components/index/swiper-image.vue */ 48));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var indexNav = function indexNav() {__webpack_require__.e(/*! require.ensure | components/index/index-nav */ "components/index/index-nav").then((function () {return resolve(__webpack_require__(/*! ../../components/index/index-nav.vue */ 53));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var threeAdv = function threeAdv() {__webpack_require__.e(/*! require.ensure | components/index/three-adv */ "components/index/three-adv").then((function () {return resolve(__webpack_require__(/*! ../../components/index/three-adv.vue */ 58));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var card = function card() {__webpack_require__.e(/*! require.ensure | components/common/card */ "components/common/card").then((function () {return resolve(__webpack_require__(/*! ../../components/common/card.vue */ 63));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
 
 
 
@@ -156,6 +162,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 {
   components: {
+    indexHead: indexHead,
     swiperImage: swiperImage,
     indexNav: indexNav,
     threeAdv: threeAdv,
@@ -222,15 +229,43 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
           src: "../../static/images/demo/demo2.jpg" },
 
         "smallbottom": {
-          src: "../../static/images/demo/demo3.jpg" } } };
+          src: "../../static/images/demo/demo3.jpg" } },
 
 
+      capsuleTop: 0,
+      capsuleHeight: 0,
+      systemHeight: 0,
+      systemBarHeight: 0 };
 
   },
+  computed: {
+    slideHeigth: function slideHeigth() {
+      return this.systemHeight - (this.capsuleTop + this.capsuleHeight) * 2;
+    } },
+
   onLoad: function onLoad() {
-
+    // console.log("slideHeigth",slideHeigth)
+    this.getMenuButtonBoundingClientRect();
+    this.getSystemInfo();
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    getMenuButtonBoundingClientRect: function getMenuButtonBoundingClientRect() {
+      var result = uni.getMenuButtonBoundingClientRect();
+      // console.log("小程序按钮", result)
+      this.capsuleTop = result.top;
+      this.capsuleHeight = result.height;
+    },
+    // 获取系统信息
+    getSystemInfo: function getSystemInfo() {var _this = this;
+      uni.getSystemInfo({
+        success: function success(res) {
+          // console.log("系统信息", res)
+          _this.systemHeight = res.windowHeight;
+          _this.systemBarHeight = res.statusBarHeight;
+        } });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 ],[[12,"common/runtime","common/vendor"]]]);

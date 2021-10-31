@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "index-head": "/components/index/index-head",
     "swiper-image": "/components/index/swiper-image",
     "index-nav": "/components/index/index-nav",
     "three-adv": "/components/index/three-adv",
