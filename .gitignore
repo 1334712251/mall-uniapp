@@ -34,5 +34,6 @@ hs_err_pid*
 
 
 .idea
-node_modules
-unpackage
+/node_modules
+/unpackage/dist
+/unpackage
