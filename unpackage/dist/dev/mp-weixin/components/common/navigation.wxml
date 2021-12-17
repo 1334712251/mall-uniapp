@@ -1,1 +1,0 @@
-<view><view style="{{'width:750rpx;background-color:#FFFFFF;'+('height:'+(StatusBar+'px')+';')}}"></view><view style="{{'width:750rpx;background-color:#007AFF;'+('height:'+(Page_MagTOP+'px')+';')}}"></view></view>
